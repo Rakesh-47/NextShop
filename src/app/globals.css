@@ -1,0 +1,44 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom CSS rules outside of @layer directives */
+body {
+  overflow-y: scroll;
+}
+
+/* Styles in the `parts` layer */
+@layer components {
+  .head_icon {
+    @apply bg-gray-200 rounded-md p-[6px] text-[12px] cursor-pointer hover:bg-accent;
+  }
+
+  .navi1:hover {
+    color: #ff8f9c;
+    transition: all 0.4s;
+  }
+
+  .navi1::after {
+    position: absolute;
+    content: "";
+    background-color: #ff8f9c;
+    height: 3px;
+    width: 100%;
+    bottom: -5px;
+    left: 0;
+    scale: 0;
+    transform-origin: left;
+    transition: all 0.4s;
+  }
+
+  .navi1:hover::after {
+    scale: 1;
+  }
+
+  .line-clamp-2 {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;  
+    overflow: hidden;
+  }
+}
