@@ -26,8 +26,8 @@ const ProductCard = ({ img, title, desc, rating, price }) => {
   };
 
   return (
-    <div className="px-4 border border-gray-200 rounded-xl max-w-[300px] md:max-w-[350px] lg:max-w-[400px]">
-      <div className="w-full h-[200px] relative">
+    <div className="px-4 border z-1 static border-gray-200 rounded-xl max-w-[300px] md:max-w-[350px] lg:max-w-[400px]">
+      <div className="w-full h-[200px] z-1 relative">
         <Image
           src={img}
           alt={title}
@@ -65,7 +65,7 @@ const ProductCard = ({ img, title, desc, rating, price }) => {
             Rs{price}.00
             <del className="text-gray-500 ml-2">Rs{parseInt(price) + parseInt(price)/2+50}</del>
           </div>
-          <button className="bg-accent text-white rounded-md px-2 py-0 hover:bg-black">
+          <button className="bg-accent text-white rounded-md px-2 py-2 hover:bg-black w-full max-w-[100px]">
             Buy Now
           </button>
         </div>

@@ -1,5 +1,6 @@
 import React from "react"
 import ProductCard from "./productcard"
+import Mobnav from "./mobilenav"
 
 const Product=()=>{
     const data=[
@@ -67,9 +68,9 @@ const Product=()=>{
     ]
     return (
         <div>
-            <div className="container pt-16">
+            <div className="container pt-16 pb-24">
                 <h2 className="font-medium text-2xl pb-4">New Products</h2>
-                <div className="grid grid-colw-1 place-items-center sm:pace-items-start sm:grid-cols-2 lg:grid-cols-3 gap-10 xl:grid-cols-4 xl:gap-x-20 xl:gap-y-10">{
+                <div className="grid grid-colw-1 z-10 place-items-center sm:pace-items-start sm:grid-cols-2 lg:grid-cols-3 gap-10 xl:grid-cols-4 xl:gap-x-20 xl:gap-y-10">{
                     data.map((item,index) => {
                          return(
                             <ProductCard
@@ -85,6 +86,7 @@ const Product=()=>{
                     }
                 </div>
             </div>
+            <Mobnav/>
         </div>
     )
 }
